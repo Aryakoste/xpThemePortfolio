@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import Header from './components/Header.vue';
-import Image from './assets/introImage.jpg';
 
-const image = Image;
 
 
 </script>
 <template>
-    <Header>
-    </Header>
+    <!-- <Header>
+    </Header> -->
     <div class="content">
         <div class="intro">
             <div class="container">
-                <transition name="slide" mode="out-in">
-                    <RouterView />
-                </transition>              
+                <RouterView>
+
+                </RouterView>           
             </div>
         </div>
     </div>   

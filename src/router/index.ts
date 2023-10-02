@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Intro from '../views/Intro.vue';
-import Skills from '../views/Skills.vue';
-import Projects from '../views/Projects.vue';
+import XPLogin from '@/views/XPLogin.vue';
+import MainXP from '@/views/MainXP.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,12 +17,14 @@ const router = createRouter({
       component: Intro
     },
     {
-      path: '/skills',
-      component: Skills
+      path: '/login',
+      name: 'portfolioLogin',
+      component: XPLogin
     },
     {
-      path: '/projects',
-      component: Projects
+      path: '/mainXP',
+      name: 'mainPortfolio',
+      component: MainXP
     }
   ]
 })

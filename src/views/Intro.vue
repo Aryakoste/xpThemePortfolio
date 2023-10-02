@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import XPWindow from '@/components/XPWindow.vue';
 import { onMounted, ref, onBeforeUnmount, type Ref} from 'vue';
+import router from '@/router';
 const words: string[] = [
         'Developer',
         'ProblemSolver',
@@ -46,6 +48,10 @@ const words: string[] = [
       }, speed);
     };
 
+    const route = () => {
+        router.push("/login");
+    };
+
     onMounted(() => {
       wordFlick();
     });
@@ -57,7 +63,24 @@ const words: string[] = [
 
 <template>
     <div class="intro-container">
-     <div class="intro-text">
+      <div class="window">
+  <div class="logo">
+    <p class="top">Microsoft</p>
+    <p class="mid">Windows<span>XP</span></p>
+    <p class="bottom">Professional</p>
+  </div>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</div>
+        <XPWindow :style="{
+          width: '50%'
+        }"
+        :title="'Welcome to my portfolio'"
+        >
+        <div class="windowContent">
                 <!-- <div>
                     I am Arya Khochare
                 </div>
@@ -77,13 +100,15 @@ obj.firstName = <span class="string">"Arya"</span>;
 obj.lastName = <span class="string">"Khochare"</span>;
                   </code>
                 </pre>
-            </div>
-            <div>
-              Side Text
-            </div>
+                <v-btn @click="route">
+                  Go to portfolio
+                </v-btn>
+              </div>
+
+              </XPWindow>
         </div>
 </template>
 
 <style scoped>
-@import './intro.css';
+@import './intro.scss';
 </style>
