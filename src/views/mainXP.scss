@@ -4,7 +4,10 @@ $light-blue:#0c8dea;
 .screen {
   position:relative;
   background: url('../assets/mainBackground.jpg') center/cover no-repeat $light-blue;
-  
+  .mainScreenContent {
+    height: 100%;
+    padding: 4%;
+  }
   .taskbar {
     position:absolute;
     display:flex;
@@ -314,3 +317,23 @@ $light-blue:#0c8dea;
 
 * {box-sizing:border-box; user-select:none; -webkit-user-select:none; cursor:default;}
 html, body {margin:0;width:100%;height:100%;font-family:verdana;}
+
+
+.fileExplorerHeader {
+  background-color: #ece9d8;
+  color: black;
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+}
+
+.fileExplorerContent {
+  height: 400px;
+}
+
+.fileExplorerSidebar {
+  width: 20%;
+  height: 100%;
+  background: rgb(9,56,121);
+background: linear-gradient(0deg, rgba(9,56,121,1) 0%, rgba(0,189,255,1) 100%);
+}

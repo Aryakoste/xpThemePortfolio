@@ -120,7 +120,19 @@ import XPWindow from '@/components/XPWindow.vue';
         <p>7:00 PM</p>
       </div>
     </div>
-    <XPWindow></XPWindow>
+    <div class="mainScreenContent">
+    <XPWindow :title="'File Explorer'">
+          <div class="fileExplorerHeader">
+              <span>File</span>
+              <span>View</span>
+          </div>
+          <div class="fileExplorerContent">
+              <div class="fileExplorerSidebar">
+
+              </div>
+          </div>
+    </XPWindow>
+  </div>
   </div>
 </div>
 </template>
