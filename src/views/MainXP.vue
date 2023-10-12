@@ -2,6 +2,7 @@
 import soundIcon from '../assets/sound.png';
 import driverIcon from '../assets/drivers.png';
 import XPWindow from '@/components/XPWindow.vue';
+import notepadIcon from '../assets/notepad.png';
 </script>
 
 <template>
@@ -121,7 +122,7 @@ import XPWindow from '@/components/XPWindow.vue';
       </div>
     </div>
     <div class="mainScreenContent">
-    <XPWindow :title="'File Explorer'">
+    <!-- <XPWindow :title="'File Explorer'">
           <div class="fileExplorerHeader">
               <span>File</span>
               <span>View</span>
@@ -131,6 +132,13 @@ import XPWindow from '@/components/XPWindow.vue';
 
               </div>
           </div>
+    </XPWindow> -->
+    <XPWindow :title="'Notepad'" :icon-path="notepadIcon">
+        <div class="notepadContent">
+            <textarea class="notepadTextArea">
+
+            </textarea>
+        </div>
     </XPWindow>
   </div>
   </div>
@@ -138,4 +146,27 @@ import XPWindow from '@/components/XPWindow.vue';
 </template>
 
 <style scoped lang="scss" src="./mainXP.scss">
+</style>
+
+<style scoped>
+.notepadContent {
+  height: 450px;
+  background-color: white;
+  color: black;
+}
+
+.notepadTextArea {
+  height: 100%; 
+  width: 100%;
+  border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
+}
+
 </style>

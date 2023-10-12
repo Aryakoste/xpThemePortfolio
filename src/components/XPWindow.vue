@@ -1,10 +1,12 @@
 <script setup lang="ts">
-    const props = defineProps(['style', 'title']);
+    const props = defineProps(['style', 'title', 'iconPath']);
 </script>
 
 <template>
     <div class="window" :style="props.style">
-  <h2 class="windowHeader"><div class="text"><span>{{ props.title }}</span></div> 
+  <h2 class="windowHeader"><div class="text"><span class="windowHeaderTitle">
+    <img v-if="props.iconPath" :src="props.iconPath"/>
+  {{ props.title }}</span></div> 
     <a href="#" class="close">Close</a></h2>
   <div class="content">
        <slot></slot>
@@ -43,6 +45,16 @@
     );
   * {
     cursor: default;
+  }
+
+  .windowHeaderTitle img {
+    height: 20px;
+  }
+
+  .windowHeaderTitle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
     .windowHeader {
     background: #006fea;
