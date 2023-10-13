@@ -3,6 +3,7 @@ import soundIcon from '../assets/sound.png';
 import driverIcon from '../assets/drivers.png';
 import XPWindow from '@/components/XPWindow.vue';
 import notepadIcon from '../assets/notepad.png';
+import OptionItem from '@/components/UI/OptionItem.vue';
 </script>
 
 <template>
@@ -135,6 +136,10 @@ import notepadIcon from '../assets/notepad.png';
     </XPWindow> -->
     <XPWindow :title="'Notepad'" :icon-path="notepadIcon">
         <div class="notepadContent">
+          <div class="fileExplorerHeader">
+              <OptionItem></OptionItem>
+              <span>View</span>
+          </div>
             <textarea class="notepadTextArea">
 
             </textarea>

@@ -10,7 +10,6 @@ import * as directives from 'vuetify/directives'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import {  } from '@fortawesome/free-solid-svg-icons'
 import { faAngular, faReact, faVuejs, faJava, faJs, faHtml5, faCss3, faNode } from  '@fortawesome/free-brands-svg-icons';
 
 /* add icons to the library */
